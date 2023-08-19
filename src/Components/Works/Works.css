@@ -1,0 +1,116 @@
+.Works {
+    display: flex;
+    padding: 0 3rem;
+    height: 90vh;
+    margin-top: 4rem;
+}
+
+.w-right {
+    position: relative;
+    display: flex; /* Added */
+    flex-direction: column; /* Added */
+    align-items: flex-start; /* Added */
+}
+
+.w-maincircle {
+    position: relative;
+    width: 18rem;
+    height: 18rem;
+    border-radius: 50%; /* Changed to 50% for perfect circle */
+    box-shadow: var(--smboxShadow);
+    top: 2rem;
+    background: white;
+    display: flex; /* Added */
+    align-items: center; /* Added */
+    justify-content: center; /* Added */
+    margin-left: 9rem; /* Changed to margin-left for spacing */
+}
+
+.w-maincircle > * {
+    position: absolute;
+}
+
+.w-maincircle > :nth-of-type(1) {
+    top: -3rem;
+    left: 6rem;
+}
+
+.w-maincircle > :nth-of-type(2) {
+    top: 5rem;
+    left: -3rem;
+}
+
+.w-maincircle > :nth-of-type(3) {
+    top: 5rem;
+    left: 6rem;
+}
+
+.w-maincircle > :nth-of-type(4) {
+    top: 5rem;
+    left: 15rem;
+}
+
+.w-maincircle > :nth-of-type(5) {
+    top: 13rem;
+    left: 6rem;
+}
+
+.w-secircle {
+    width: 6rem;
+    height: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    border: 5px solid #ebebeb;
+    background: white;
+    box-shadow: var(--smboxShadow);
+}
+
+.w-secircle > img {
+    transform: scale(0.6);
+}
+
+.w-backcircle {
+    position: absolute;
+    height: 13rem;
+    width: 13rem;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.bluecircle {
+    background: #1949b8;
+    left: 18rem;
+    top: 0;
+}
+
+.yellowcircle {
+    background: #f5c32c;
+    left: 18rem;
+    top: 8rem;
+}
+
+@media screen and (max-width: 480px) {
+    .Works {
+        flex-direction: column;
+        height: auto;
+        padding: 0;
+        gap: 5rem;
+    }
+
+    .w-right {
+        transform: scale(0.7);
+    }
+
+    .w-maincircle {
+        position: static;
+        margin-left: 0;
+        margin-bottom: 2rem; /* Added for spacing */
+    }
+
+    .w-backcircle {
+        left: 8rem !important;
+    }
+}
+
